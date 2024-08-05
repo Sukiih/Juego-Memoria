@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: repeating-radial-gradient(circle at 0 50%, #371c42, #d3a4a4, #862eac, #d3a4a4, #371c42);
+}
+
+.title-container {
+    text-align: center;
+    text-shadow: #f527ea 2px 2px;
+    margin-top: 25px;
+    font-size: 1.5em;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #100220;
+    border: 2px solid violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    outline: none;
+}
+
+.card.flipped {
+    background-color: #ffffff;
+    color: black;
+}
+
+.card.matched {
+    background-color: rgb(239, 207, 241);
+}
+
+.card:focus {
+    outline: 3px solid red;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: auto;
+    padding: 10px;
+    color: white;
+    background: #100220;
+}
